@@ -1,7 +1,7 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column } from '@adonisjs/lucid/orm'
 
-export default class Produto extends BaseModel {
+export default class Funcionario extends BaseModel {
   @column({ isPrimary: true })
   declare id: number
 
@@ -9,13 +9,19 @@ export default class Produto extends BaseModel {
   declare nome: String
 
   @column()
-  declare preco: Number
+  declare cpf: String
 
   @column()
-  declare tamanho: String
+  declare endereco: String
 
   @column()
-  declare tipoid: Number
+  declare sexo: String
+
+  @column()
+  declare telefone: String
+
+  @column()
+  declare cargoid: Number
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
