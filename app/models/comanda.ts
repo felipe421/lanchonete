@@ -9,13 +9,13 @@ export default class Comanda extends BaseModel {
   declare mesa: String
 
   @column()
-  declare fucionarioid: Number
+  declare fucionarioId: Number
 
   @column()
-  declare clienteid: Number
+  declare clienteId: Number
 
   @column()
-  declare formaPagamentoid: Number
+  declare formaPagamentoId: Number
 
   @column()
   declare data_pagamento: DateTime

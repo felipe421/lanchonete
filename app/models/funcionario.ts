@@ -21,7 +21,7 @@ export default class Funcionario extends BaseModel {
   declare telefone: String
 
   @column()
-  declare cargoid: Number
+  declare cargoId: Number
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime

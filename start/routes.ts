@@ -15,7 +15,7 @@ import ComandasController from '../app/controllers/comandas_controller.js'
 
 router.get('/', async () => {
   return {
-    hello: 'world',
+    hello: '123',
   }
 })
 
@@ -25,8 +25,8 @@ router.get('/hello', async () => {
   }
 })
 
-router.resource('/felipe ', ProdutosController).apiOnly()
-router.resource('/felipe ', ClientesController).apiOnly()
-router.resource('/felipe ', FuncionariosController).apiOnly()
-router.resource('/felipe ', FuncionariosController).apiOnly()
+router.resource('/produto', ProdutosController).apiOnly()
+router.resource('/cliente', ClientesController).apiOnly()
+router.resource('/funcionario', FuncionariosController).apiOnly()
+
 

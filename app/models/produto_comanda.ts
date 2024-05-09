@@ -9,7 +9,7 @@ export default class ProdutoComanda extends BaseModel {
   declare produtoid: Number
 
   @column()
-  declare comandaid: Number
+  declare comandaId: Number
 
   @column()
   declare quantidade: Number
