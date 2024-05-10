@@ -11,7 +11,7 @@ import router from '@adonisjs/core/services/router'
 import ProdutosController from '../app/controllers/produtos_controller.js'
 import ClientesController from '../app/controllers/clientes_controller.js'
 import FuncionariosController from '../app/controllers/funcionarios_controller.js'
-import ComandasController from '../app/controllers/comandas_controller.js'
+
 
 router.get('/', async () => {
   return {

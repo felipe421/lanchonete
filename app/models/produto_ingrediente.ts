@@ -6,7 +6,7 @@ export default class ProdutoIngrediente extends BaseModel {
   declare id: number
 
   @column()
-  declare produtoid: Number
+  declare produtoId: Number
 
   @column()
   declare ingredienteId: Number

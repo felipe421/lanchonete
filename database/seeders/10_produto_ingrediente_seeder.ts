@@ -1,7 +1,54 @@
 import { BaseSeeder } from '@adonisjs/lucid/seeders'
-
+import ProdutoIngrediente from '../../app/models/produto_ingrediente.js'
 export default class extends BaseSeeder {
   async run() {
-    // Write your database queries inside the run method
+    await ProdutoIngrediente.createMany([
+      { produtoId: 1, ingredienteId: 8 },
+      { produtoId: 1, ingredienteId: 10 },
+      { produtoId: 2, ingredienteId: 9 },
+      { produtoId: 2, ingredienteId: 8 },
+      { produtoId: 2, ingredienteId: 7 },
+      { produtoId: 5, ingredienteId: 8 },
+      { produtoId: 5, ingredienteId: 11 },
+      { produtoId: 5, ingredienteId: 7 },
+      { produtoId: 5, ingredienteId: 12 },
+      { produtoId: 5, ingredienteId: 13 },
+      { produtoId: 6, ingredienteId: 9 },
+      { produtoId: 7, ingredienteId: 9 },
+      { produtoId: 7, ingredienteId: 14 },
+      { produtoId: 8, ingredienteId: 1 },
+      { produtoId: 8, ingredienteId: 15 },
+      { produtoId: 9, ingredienteId: 1 },
+      { produtoId: 9, ingredienteId: 16 },
+      { produtoId: 10, ingredienteId: 1 },
+      { produtoId: 10, ingredienteId: 4 },
+      { produtoId: 11, ingredienteId: 8 },
+      { produtoId: 11, ingredienteId: 11 },
+      { produtoId: 11, ingredienteId: 7 },
+      { produtoId: 11, ingredienteId: 13 },
+      { produtoId: 12, ingredienteId: 11 },
+      { produtoId: 11, ingredienteId: 8 },
+      { produtoId: 11, ingredienteId: 5 },
+      { produtoId: 11, ingredienteId: 17 },
+      { produtoId: 11, ingredienteId: 18 },
+      { produtoId: 12, ingredienteId: 17 },
+      { produtoId: 12, ingredienteId: 18 },
+      { produtoId: 12, ingredienteId: 8 },
+      { produtoId: 12, ingredienteId: 11 },
+      { produtoId: 12, ingredienteId: 5 },
+      { produtoId: 13, ingredienteId: 17 },
+      { produtoId: 13, ingredienteId: 18 },
+      { produtoId: 13, ingredienteId: 8 },
+      { produtoId: 13, ingredienteId: 11 },
+      { produtoId: 13, ingredienteId: 5 },
+      { produtoId: 15, ingredienteId: 9 },
+      { produtoId: 15, ingredienteId: 13 },
+      { produtoId: 16, ingredienteId: 1 },
+      { produtoId: 16, ingredienteId: 2 },
+      { produtoId: 16, ingredienteId: 5 },
+      { produtoId: 16, ingredienteId: 4 },
+      { produtoId: 16, ingredienteId: 6 },
+      { produtoId: 16, ingredienteId: 3 },
+    ])
   }
 }

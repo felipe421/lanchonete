@@ -7,10 +7,10 @@ export default class extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
       table.string('nome',45).notNullable().unique()
-      table.string('cpf', 14).notNullable().unique()
-      table.string('endereco', 100).notNullable()
+      table.string('cpf', 14).notNullable()
+      table.string('endereco', 100)
       table.string('sexo', 1).notNullable()
-      table.string('telefone', 15).unique()
+      table.string('telefone', 15)
       table.integer('cargo_id').unsigned().references('id').inTable('cargos')
 
       table.timestamp('created_at')

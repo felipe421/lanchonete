@@ -9,7 +9,7 @@ export default class Comanda extends BaseModel {
   declare mesa: String
 
   @column()
-  declare fucionarioId: Number
+  declare funcionarioId: Number
 
   @column()
   declare clienteId: Number
