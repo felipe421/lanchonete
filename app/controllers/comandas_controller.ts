@@ -16,6 +16,7 @@ export default class ComandasController {
             .preload('cliente')
             .preload('formaPagamento')
             .preload('funcionario')
+            .preload('cliente')
             .first()
     }
 
