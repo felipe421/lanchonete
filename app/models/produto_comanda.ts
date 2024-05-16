@@ -1,5 +1,9 @@
 import { DateTime } from 'luxon'
-import { BaseModel, column } from '@adonisjs/lucid/orm'
+import { BaseModel, belongsTo, column, hasMany } from '@adonisjs/lucid/orm'
+import Produto from './produto.js'
+import type { HasMany } from '@adonisjs/lucid/types/relations'
+import Comanda from './comanda.js'
+import type { BelongsTo } from '@adonisjs/lucid/types/relations'
 
 export default class ProdutoComanda extends BaseModel {
   @column({ isPrimary: true })
@@ -19,4 +23,5 @@ export default class ProdutoComanda extends BaseModel {
 
   @column.dateTime({ autoCreate: true, autoUpdate: true })
   declare updatedAt: DateTime
+
 }

@@ -1,4 +1,4 @@
- import type { HttpContext } from '@adonisjs/core/http'
+import type { HttpContext } from '@adonisjs/core/http'
 
 import Cliente from "../models/cliente.js"
 
@@ -13,7 +13,10 @@ export default class ClientesController {
     async show({ params }: HttpContext) {
 
 
-        return await Cliente.findOrFail(params.id)
+        return await Cliente.query()
+            .where('id', params.id)
+            .preload('comanda')
+            .first()
     }
 
     async store({ request }: HttpContext) {

@@ -1,4 +1,4 @@
- import type { HttpContext } from '@adonisjs/core/http'
+import type { HttpContext } from '@adonisjs/core/http'
 import Funcionario from "../models/funcionario.js";
 export default class FuncionariosController {
     async index({ request }: HttpContext) {
@@ -11,7 +11,11 @@ export default class FuncionariosController {
     async show({ params }: HttpContext) {
 
 
-        return await Funcionario.findOrFail(params.id)
+        return await Funcionario.query()
+            .where('id', params.id)
+            .preload('cargo')
+            .preload('comanda')
+            .first()
     }
 
     async store({ request }: HttpContext) {

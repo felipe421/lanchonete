@@ -1,4 +1,5 @@
- import type { HttpContext } from '@adonisjs/core/http'
+import type { HttpContext } from '@adonisjs/core/http'
+
 
 import Produto from "../models/produto.js";
 
@@ -13,7 +14,11 @@ export default class ProdutosController {
     async show({ params }: HttpContext) {
 
 
-        return await Produto.findOrFail(params.id)
+        return await Produto.query()
+            .where('id', params.id)
+            .preload('tipo')
+            .preload('ingrediente')
+            .first()
     }
 
     async store({ request }: HttpContext) {
